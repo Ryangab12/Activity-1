@@ -17,7 +17,7 @@ body{
     background-color: aquamarine;
 }
 
-#task-input {
+#task-input, #task-due-date {
     width: 90%;
     padding: 10px;
     margin-bottom: 10px;
@@ -40,17 +40,26 @@ body{
     background-color: #218838;
 }
 
+#sort-tasks {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    background-color: white;
+}
+
 #task-list {
     list-style: none;
     padding: 0;
     margin: 0;
-    text-align: left; 
-    width: 100%; 
+    text-align: left;
+    width: 100%;
 }
 
 .task-item {
     display: flex;
-    justify-content: center; 
+    justify-content: space-between;
     align-items: center;
     padding: 10px;
     border-bottom: 1px solid #ccc;
@@ -61,12 +70,17 @@ body{
     text-decoration: line-through;
 }
 
+.task-item.expired span {
+    color: red;
+    font-weight: bold;
+}
+
 .task-item input[type="checkbox"] {
     margin-right: 10px;
 }
 
 .task-item span {
-    flex-grow: 1; 
-    text-align: left; 
+    flex-grow: 1;
+    text-align: left;
     margin-left: 10px;
 }

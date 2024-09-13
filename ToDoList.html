@@ -6,8 +6,17 @@
 <body>
     <h1>To Do List</h1>
     <div id="todo-container">
-        <input type="text" id="task-input" placeholder="Add a new task">
+
+        <input type="text" id="task-input" placeholder="Add new task">
+        <input type="date" id="task-due-date" placeholder="Due date">
+
         <button id="add-task">Add</button>
+
+        <select id="sort-tasks">
+            <option value="latest">Sort by Latest</option>
+            <option value="oldest">Sort by Oldest</option>
+        </select>
+        
         <ul id="task-list"></ul>
     </div>
     <script src="main.js"></script>
